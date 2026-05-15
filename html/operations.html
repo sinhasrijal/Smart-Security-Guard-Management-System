@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Operations Monitoring
+    </title>
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="../css/admin.css">
+
+    <!-- GOOGLE FONT -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-top">
+
+            <div class="logo-box">
+                SGS
+            </div>
+
+            <h2>
+                Operations
+            </h2>
+
+        </div>
+
+        <ul class="sidebar-links">
+
+            <li>
+
+                <a href="../html/admin.html">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    Dashboard
+
+                </a>
+
+            </li>
+
+            <li class="active">
+
+                <a href="#live-duty">
+
+                    <i class="fa-solid fa-user-shield"></i>
+
+                    Live Duty
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#shift-tracking">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    Shift Tracking
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#gate-monitoring">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Gate Monitoring
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#unassigned-guards">
+
+                    <i class="fa-solid fa-users-slash"></i>
+
+                    Unassigned Guards
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="../html/index.html">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Logout
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>
+                    Operations Monitoring
+                </h1>
+
+                <p>
+
+                    Live deployment and
+                    operational supervision
+                    of guards across all
+                    active locations.
+
+                </p>
+
+            </div>
+
+            <div class="admin-profile">
+
+                <div class="admin-icon">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>
+                        Live Monitoring
+                    </h3>
+
+                    <span>
+                        Smart Security Operations
+                    </span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- LIVE DUTY STATUS -->
+
+        <section
+            class="dashboard-section"
+            id="live-duty">
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>
+                        Live Duty Status
+                    </h2>
+
+                    <p class="section-subtitle">
+
+                        View currently active
+                        and inactive guard duties.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Guard
+                            </th>
+
+                            <th>
+                                Gate
+                            </th>
+
+                            <th>
+                                Shift
+                            </th>
+
+                            <th>
+                                Duty Date
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="liveDutyTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- SHIFT TRACKING -->
+
+        <section
+            class="dashboard-section"
+            id="shift-tracking">
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>
+                        Shift Tracking
+                    </h2>
+
+                    <p class="section-subtitle">
+
+                        Monitor guard shift
+                        allocation and timings.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Guard
+                            </th>
+
+                            <th>
+                                Shift
+                            </th>
+
+                            <th>
+                                Start Time
+                            </th>
+
+                            <th>
+                                End Time
+                            </th>
+
+                            <th>
+                                Assignment
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="shiftTrackingTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- GATE MONITORING -->
+
+        <section
+            class="dashboard-section"
+            id="gate-monitoring">
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>
+                        Gate Monitoring
+                    </h2>
+
+                    <p class="section-subtitle">
+
+                        Monitor live gate
+                        deployment coverage.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Gate
+                            </th>
+
+                            <th>
+                                Required Guards
+                            </th>
+
+                            <th>
+                                Active Guards
+                            </th>
+
+                            <th>
+                                Current Shift
+                            </th>
+
+                            <th>
+                                Coverage Status
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="gateMonitoringTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- UNASSIGNED GUARDS -->
+
+        <section
+            class="dashboard-section"
+            id="unassigned-guards">
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>
+                        Unassigned Guards
+                    </h2>
+
+                    <p class="section-subtitle">
+
+                        Guards currently not
+                        assigned to any shift.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Guard ID
+                            </th>
+
+                            <th>
+                                Guard Name
+                            </th>
+
+                            <th>
+                                Phone
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="unassignedGuardsTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+       
+        
+<!-- =========================
+    RECENTLY COMPLETED SHIFTS
+========================= -->
+
+<section class="dashboard-section">
+
+    <div class="section-header">
+
+        <div>
+
+            <h2>
+                Recently Completed Shifts
+            </h2>
+
+            <p class="section-subtitle">
+
+                Guards who recently completed their duties.
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Guard</th>
+                    <th>Gate</th>
+                    <th>Shift</th>
+                    <th>Completed At</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="completedShiftBody">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+    </main>
+
+    <!-- JS -->
+
+    <script src="../js/operations.js"></script>
+
+</body>
+
+</html>

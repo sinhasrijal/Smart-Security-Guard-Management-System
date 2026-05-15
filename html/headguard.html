@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Head Guard Dashboard
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/admin.css">
+
+    <!-- GOOGLE FONT -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo-section">
+
+            <div class="logo-box">
+
+                SGS
+
+            </div>
+
+            <div>
+
+                <h2>
+                    Head Guard
+                </h2>
+
+                <p>
+                    Operations Portal
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="sidebar-menu">
+
+            <button class="menu-item active">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                Dashboard
+
+            </button>
+
+
+            <button class="menu-item">
+
+                <i class="fa-solid fa-users"></i>
+
+                Assigned Guards
+
+            </button>
+
+
+            <button class="menu-item">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Gate Monitoring
+
+            </button>
+
+
+            <button class="menu-item">
+
+                <i class="fa-solid fa-clock"></i>
+
+                Duty Assignment
+
+            </button>
+
+
+            <button class="menu-item">
+
+                <i class="fa-solid fa-key"></i>
+
+                Gate Codes
+
+            </button>
+
+
+            <button class="menu-item">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                Attendance
+
+            </button>
+
+
+            <button class="menu-item">
+
+                <i class="fa-solid fa-wallet"></i>
+
+                Salary
+
+            </button>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>
+                    Head Guard Dashboard
+                </h1>
+
+                <p>
+
+                    Manage duties,
+                    attendance
+                    and operational supervision.
+
+                </p>
+
+            </div>
+
+
+            <div class="admin-profile">
+
+                <div class="profile-circle">
+
+                    HG
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- STAT CARDS -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </div>
+
+                <div>
+
+                    <h3 id="totalAssignedGuards">
+
+                        0
+
+                    </h3>
+
+                    <p>
+
+                        Assigned Guards
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+
+                    <i class="fa-solid fa-user-check"></i>
+
+                </div>
+
+                <div>
+
+                    <h3 id="activeGuards">
+
+                        0
+
+                    </h3>
+
+                    <p>
+
+                        Active Guards
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon orange">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                </div>
+
+                <div>
+
+                    <h3 id="activeLocations">
+
+                        0
+
+                    </h3>
+
+                    <p>
+
+                        Active Locations
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon red">
+
+                    <i class="fa-solid fa-wallet"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>
+
+                        ₹25000
+
+                    </h3>
+
+                    <p>
+
+                        Monthly Salary
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ASSIGNED GUARDS -->
+
+        <section class="dashboard-section">
+
+            <div class="section-header">
+
+                <h2>
+
+                    Assigned Guards
+
+                </h2>
+
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Guard ID
+                            </th>
+
+                            <th>
+                                Guard Name
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Current Duty
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="assignedGuardsTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- GATE STATUS -->
+
+        <section class="dashboard-section">
+
+            <div class="section-header">
+
+                <h2>
+
+                    Gate Monitoring
+
+                </h2>
+
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Gate
+                            </th>
+
+                            <th>
+                                Required
+                            </th>
+
+                            <th>
+                                Assigned
+                            </th>
+
+                            <th>
+                                Remaining
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="gateStatusTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- DUTY ASSIGNMENT -->
+
+        <section class="dashboard-section">
+
+            <div class="section-header">
+
+                <h2>
+
+                    Assign Duty
+
+                </h2>
+
+            </div>
+
+
+            <form id="assignDutyForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Guard ID
+
+                        </label>
+
+                        <input
+                            type="number"
+                            id="guardId"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Gate ID
+
+                        </label>
+
+                        <input
+                            type="number"
+                            id="gateId"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Shift ID
+
+                        </label>
+
+                        <input
+                            type="number"
+                            id="shiftId"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Duty Date
+
+                        </label>
+
+                        <input
+                            type="date"
+                            id="dutyDate"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="submit-btn">
+
+                    Assign Duty
+
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- GATE CODES -->
+
+        <section class="dashboard-section">
+
+            <div class="section-header">
+
+                <h2>
+
+                    Generated Gate Codes
+
+                </h2>
+
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Guard
+                            </th>
+
+                            <th>
+                                Gate
+                            </th>
+
+                            <th>
+                                Shift
+                            </th>
+
+                            <th>
+                                Gate Code
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="gateCodeTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ATTENDANCE -->
+
+        <section class="dashboard-section">
+
+            <div class="section-header">
+
+                <h2>
+
+                    Attendance Monitoring
+
+                </h2>
+
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Guard
+                            </th>
+
+                            <th>
+                                Check In
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Verified
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="attendanceTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../js/headguard.js"></script>
+
+</body>
+
+</html>

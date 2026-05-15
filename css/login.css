@@ -1,0 +1,526 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#020817;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    color:white;
+}
+
+
+/* =========================
+   MAIN WRAPPER
+========================= */
+
+.login-wrapper{
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:grid;
+
+    grid-template-columns:1fr 0.9fr;
+}
+
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.login-left{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:5rem;
+
+    background:
+
+    linear-gradient(
+    rgba(2,8,23,0.84),
+    rgba(2,8,23,0.92)
+    ),
+
+    url("../images/hero-security.png");
+
+    background-size:cover;
+
+    background-position:center;
+}
+
+
+/* CONTENT */
+
+.login-left-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:560px;
+}
+
+
+/* BADGE */
+
+.portal-badge{
+
+    display:inline-block;
+
+    padding:0.9rem 1.7rem;
+
+    border-radius:50px;
+
+    background:
+    rgba(34,197,94,0.10);
+
+    border:
+    1px solid rgba(34,197,94,0.22);
+
+    color:#22c55e;
+
+    font-size:0.9rem;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    margin-bottom:2.2rem;
+}
+
+
+/* TITLE */
+
+.login-left-content h1{
+
+    font-size:4rem;
+
+    font-weight:700;
+
+    line-height:1.1;
+
+    margin-bottom:2rem;
+}
+
+
+/* DESCRIPTION */
+
+.login-left-content p{
+
+    color:#dbe4f0;
+
+    line-height:1.9;
+
+    font-size:1.15rem;
+
+    margin-bottom:2.5rem;
+}
+
+
+/* FEATURE LIST */
+
+.feature-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:1.4rem;
+}
+
+
+/* FEATURE ITEM */
+
+.feature-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:1rem;
+
+    color:#f1f5f9;
+
+    font-size:1.05rem;
+
+    font-weight:500;
+}
+
+
+/* FEATURE ICON */
+
+.feature-item i{
+
+    color:#22c55e;
+
+    font-size:1rem;
+}
+
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.login-right{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:3rem;
+
+    background:#020817;
+}
+
+
+/* GLOW */
+
+.login-right::before{
+
+    content:'';
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    background:
+    rgba(34,197,94,0.08);
+
+    border-radius:50%;
+
+    filter:blur(120px);
+}
+
+
+/* =========================
+   LOGIN BOX
+========================= */
+
+.login-box{
+
+    width:100%;
+
+    max-width:460px;
+
+    background:
+    rgba(7,21,43,0.92);
+
+    backdrop-filter:blur(14px);
+
+    border:
+    1px solid rgba(255,255,255,0.08);
+
+    border-radius:28px;
+
+    padding:3rem;
+
+    position:relative;
+
+    z-index:2;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,0.35);
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.login-logo{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-bottom:1.8rem;
+}
+
+
+.logo-circle{
+
+    width:75px;
+
+    height:75px;
+
+    border-radius:50%;
+
+    background:
+    linear-gradient(
+    135deg,
+    #22c55e,
+    #15803d
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:1.8rem;
+
+    box-shadow:
+    0 12px 28px rgba(34,197,94,0.25);
+}
+
+
+/* =========================
+   TITLES
+========================= */
+
+.login-box h2{
+
+    text-align:center;
+
+    font-size:2.2rem;
+
+    margin-bottom:0.7rem;
+}
+
+
+.login-box p{
+
+    text-align:center;
+
+    color:#cbd5e1;
+
+    line-height:1.8;
+
+    margin-bottom:2rem;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:1.3rem;
+}
+
+
+/* INPUT GROUP */
+
+.input-group{
+
+    position:relative;
+}
+
+
+/* INPUT LABEL */
+
+.input-group label{
+
+    display:block;
+
+    margin-bottom:0.7rem;
+
+    color:#dbe4f0;
+
+    font-size:0.95rem;
+
+    font-weight:500;
+}
+
+
+/* INPUT */
+
+.input-group input{
+
+    width:100%;
+
+    padding:1rem 1rem 1rem 1.2rem;
+
+    border-radius:15px;
+
+    border:
+    1px solid rgba(255,255,255,0.08);
+
+    background:#0f172a;
+
+    color:white;
+
+    outline:none;
+
+    font-size:1rem;
+
+    transition:0.3s;
+}
+
+
+/* PLACEHOLDER */
+
+.input-group input::placeholder{
+
+    color:#94a3b8;
+}
+
+
+/* INPUT FOCUS */
+
+.input-group input:focus{
+
+    border-color:#22c55e;
+
+    box-shadow:
+    0 0 0 4px rgba(34,197,94,0.10);
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.login-btn-main{
+
+    width:100%;
+
+    padding:1rem;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #22c55e,
+    #16a34a
+    );
+
+    color:#04111f;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    margin-top:0.6rem;
+}
+
+
+.login-btn-main:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 12px 28px rgba(34,197,94,0.22);
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back-home{
+
+    text-align:center;
+
+    margin-top:1.8rem;
+}
+
+
+.back-home a{
+
+    text-decoration:none;
+
+    color:#22c55e;
+
+    font-size:0.95rem;
+
+    transition:0.3s;
+}
+
+
+.back-home a:hover{
+
+    color:white;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1100px){
+
+    .login-wrapper{
+
+        grid-template-columns:1fr;
+    }
+
+    .login-left{
+
+        display:none;
+    }
+
+    .login-right{
+
+        padding:2rem;
+    }
+}
+
+
+@media(max-width:650px){
+
+    .login-box{
+
+        padding:2rem;
+    }
+
+    .login-left-content h1{
+
+        font-size:3rem;
+    }
+
+    .login-box h2{
+
+        font-size:2rem;
+    }
+
+    .logo-circle{
+
+        width:65px;
+
+        height:65px;
+
+        font-size:1.5rem;
+    }
+}

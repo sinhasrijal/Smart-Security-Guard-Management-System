@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Admin Dashboard
+    </title>
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="../css/admin.css">
+
+    <!-- GOOGLE FONT -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-top">
+
+            <div class="logo-box">
+                SGS
+            </div>
+
+            <h2>
+                Admin Portal
+            </h2>
+
+        </div>
+
+        <ul class="sidebar-links">
+
+            <li class="active">
+
+                <a href="#dashboard-section">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    Dashboard
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#guards-section">
+
+                    <i class="fa-solid fa-user-shield"></i>
+
+                    Guards
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#headguards-section">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    Head Guards
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#duties-section">
+
+                    <i class="fa-solid fa-clipboard-list"></i>
+
+                    Duty Monitoring
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#attendance-section">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                    Attendance Overview
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#salary-section">
+
+                    <i class="fa-solid fa-wallet"></i>
+
+                    Salary Monitoring
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#location-section">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Locations
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="../html/index.html">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Logout
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <header
+            class="topbar"
+            id="dashboard-section">
+
+            <div>
+
+                <h1>
+                    Dashboard Overview
+                </h1>
+
+                <p>
+                    Smart Security Guard Management System
+                </p>
+
+            </div>
+
+            <div class="admin-profile">
+
+                <div class="admin-icon">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>
+                        Administrator
+                    </h3>
+
+                    <span>
+                        System Supervision Access
+                    </span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- STATS GRID -->
+
+        <section class="stats-grid">
+
+            <!-- CARD 1 -->
+
+            <div class="stats-card">
+
+                <div class="stats-icon green">
+
+                    <i class="fa-solid fa-user-shield"></i>
+
+                </div>
+
+                <div>
+
+                    <h2 id="totalGuards">
+                        --
+                    </h2>
+
+                    <p>
+                        Total Guards
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 2 -->
+
+            <div class="stats-card">
+
+                <div class="stats-icon blue">
+
+                    <i class="fa-solid fa-clipboard-list"></i>
+
+                </div>
+
+                <div>
+
+                    <h2 id="activeDuties">
+                        --
+                    </h2>
+
+                    <p>
+                        Guards On Duty
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 3 -->
+
+            <div class="stats-card">
+
+                <div class="stats-icon orange">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+                <div>
+
+                    <h2 id="completedShifts">
+                        --
+                    </h2>
+
+                    <p>
+                        Completed Shifts
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 4 -->
+
+            <div class="stats-card">
+
+                <div class="stats-icon red">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                </div>
+
+                <div>
+
+                    <h2 id="activeLocations">
+                        --
+                    </h2>
+
+                    <p>
+                        Active Locations
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- GUARD MANAGEMENT -->
+
+        <section
+            class="dashboard-section"
+            id="guards-section">
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>
+                        Guard Management
+                    </h2>
+
+                    <p class="section-subtitle">
+
+                        Add guards and assign
+                        them under head guards.
+
+                    </p>
+
+                </div>
+
+                <button
+                    class="section-btn"
+                    id="openGuardModal">
+
+                    Add New Guard
+
+                </button>
+
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Guard ID
+                            </th>
+
+                            <th>
+                                Name
+                            </th>
+
+                            <th>
+                                Phone
+                            </th>
+
+                            <th>
+                                Head Guard
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="guardsTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- HEAD GUARD SECTION -->
+
+        <section
+            class="dashboard-section"
+            id="headguards-section">
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>
+                        Head Guard Supervision
+                    </h2>
+
+                    <p class="section-subtitle">
+
+                        Monitor head guards and
+                        workforce teams.
+
+                    </p>
+
+                </div>
+
+                <button
+                    class="section-btn"
+                    id="openHeadGuardModal">
+
+                    Add Head Guard
+
+                </button>
+
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                ID
+                            </th>
+
+                            <th>
+                                Name
+                            </th>
+
+                            <th>
+                                Phone
+                            </th>
+
+                            <th>
+                                Assigned Guards
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="headguardsTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- DUTY MONITORING -->
+
+        <section
+            class="dashboard-section"
+            id="duties-section">
+
+            <div class="section-header">
+
+    <div>
+
+        <h2>
+            Duty Monitoring
+        </h2>
+
+        <p class="section-subtitle">
+
+            Monitor guard deployment
+            assigned by head guards.
+
+        </p>
+
+    </div>
+
+    <button
+        class="section-btn"
+        onclick="openOperationsPage()">
+
+        View Operations
+
+    </button>
+
+</div>
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Guard
+                            </th>
+
+                            <th>
+                                Gate
+                            </th>
+
+                            <th>
+                                Shift
+                            </th>
+
+                            <th>
+                                Duty Date
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="dutiesTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ATTENDANCE -->
+<!-- =========================
+     ATTENDANCE CARD
+========================= -->
+
+<section class="dashboard-section">
+
+    <div class="section-header">
+
+        <div>
+
+            <h2>
+                Attendance Overview
+            </h2>
+
+            <p class="section-subtitle">
+                Search attendance records using Guard ID.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- SEARCH -->
+
+    <div class="search-row">
+
+        <input
+            type="number"
+            id="attendanceGuardId"
+            placeholder="Enter Guard ID"
+        >
+
+        <button onclick="searchAttendance()">
+
+            Search Attendance
+
+        </button>
+
+    </div>
+
+    <!-- TABLE -->
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Date</th>
+                    <th>Check In</th>
+                    <th>Status</th>
+                    <th>Verified</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="attendanceTableBody">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SALARY CARD
+========================= -->
+
+<section class="dashboard-section">
+
+    <div class="section-header">
+
+        <div>
+
+            <h2>
+                Salary Monitoring
+            </h2>
+
+            <p class="section-subtitle">
+                Search salary details using Guard ID.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- SEARCH -->
+
+    <div class="search-row">
+
+        <input
+            type="number"
+            id="salaryId"
+            placeholder="Enter Guard ID"
+        >
+
+        <button onclick="searchSalary()">
+
+            Search Salary
+
+        </button>
+
+    </div>
+
+    <!-- TABLE -->
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Month</th>
+                    <th>Days Worked</th>
+                    <th>Total Salary</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="salaryTableBody">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+        <!-- LOCATIONS -->
+
+        <section
+            class="dashboard-section"
+            id="location-section">
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>
+                        Location Monitoring
+                    </h2>
+
+                    <p class="section-subtitle">
+
+                        View active security
+                        deployment locations.
+
+                    </p>
+
+                </div>
+
+                <button
+    class="section-btn"
+    id="openLocationModal">
+
+    Add New Location
+
+</button>
+
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Gate ID
+                            </th>
+
+                            <th>
+                                Location
+                            </th>
+
+                            <th>
+                                Active Guards
+                            </th>
+
+                            <th>
+                                Current Shift
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="locationTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        
+    </main>
+
+    <!-- JS -->
+    <!-- ADD GUARD MODAL -->
+
+<div
+    class="modal"
+    id="guardModal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2>
+                Add New Guard
+            </h2>
+
+            <span id="closeGuardModal">
+                &times;
+            </span>
+
+        </div>
+
+        <form id="guardForm">
+
+            <div class="form-group">
+
+                <label>
+                    Guard Name
+                </label>
+
+                <input
+                    type="text"
+                    id="guardName"
+                    required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+                    Phone Number
+                </label>
+
+                <input
+                    type="text"
+                    id="guardPhone"
+                    required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+                    Salary Rate
+                </label>
+
+                <input
+                    type="number"
+                    id="salaryRate"
+                    min="1"
+                    required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+                    Head Guard ID
+                </label>
+
+                <input
+                    type="number"
+                    id="headGuardId"
+                    min="1"
+                    required>
+
+            </div>
+
+            <button
+                type="submit"
+                class="submit-btn">
+
+                Add Guard
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+<!-- ADD HEAD GUARD MODAL -->
+
+<div
+    class="modal"
+    id="headGuardModal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2>
+                Add Head Guard
+            </h2>
+
+            <span id="closeHeadGuardModal">
+                &times;
+            </span>
+
+        </div>
+
+        <form id="headGuardForm">
+
+            <div class="form-group">
+
+                <label>
+                    Head Guard Name
+                </label>
+
+                <input
+                    type="text"
+                    id="headGuardName"
+                    required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+                    Phone Number
+                </label>
+
+                <input
+                    type="text"
+                    id="headGuardPhone"
+                    required>
+
+            </div>
+
+            <button
+                type="submit"
+                class="submit-btn">
+
+                Add Head Guard
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+<!-- ADD LOCATION MODAL -->
+
+<div
+    class="modal"
+    id="locationModal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2>
+                Add New Location
+            </h2>
+
+            <span id="closeLocationModal">
+                &times;
+            </span>
+
+        </div>
+
+        <form id="locationForm">
+
+            <div class="form-group">
+
+                <label>
+                    Gate Name
+                </label>
+
+                <input
+                    type="text"
+                    id="gateName"
+                    required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+                    Location
+                </label>
+
+                <input
+                    type="text"
+                    id="gateLocation"
+                    required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+                    Required Guards
+                </label>
+
+                <input
+                    type="number"
+                    id="requiredGuards"
+                    min="1"
+                    required>
+
+            </div>
+
+            <button
+                type="submit"
+                class="submit-btn">
+
+                Add Location
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+    <script src="../js/admin.js"></script>
+
+</body>
+
+</html>
