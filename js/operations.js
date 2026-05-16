@@ -9,7 +9,7 @@ async function loadLiveDuty(){
         const response =
         await fetch(
 
-            'http://localhost:3000/api/admin/live-duty'
+            'https://smart-security-guard-management-system.onrender.com/api/admin/live-duty'
         );
 
         const duties =
@@ -75,7 +75,7 @@ async function loadShiftTracking(){
         const response =
         await fetch(
 
-            'http://localhost:3000/api/admin/shift-tracking'
+            'https://smart-security-guard-management-system.onrender.com/api/admin/shift-tracking'
         );
 
         const shifts =
@@ -141,7 +141,7 @@ async function loadGateMonitoring(){
         const response =
         await fetch(
 
-            'http://localhost:3000/api/admin/gate-monitoring'
+            'https://smart-security-guard-management-system.onrender.com/api/admin/gate-monitoring'
         );
 
         const gates =
@@ -221,7 +221,7 @@ async function loadUnassignedGuards(){
         const response =
         await fetch(
 
-            'http://localhost:3000/api/admin/unassigned-guards'
+            'https://smart-security-guard-management-system.onrender.com/api/admin/unassigned-guards'
         );
 
         const guards =
@@ -283,7 +283,7 @@ async function loadCompletedShifts(){
 
         await fetch(
 
-            'http://localhost:3000/api/admin/completed-shifts'
+            'https://smart-security-guard-management-system.onrender.com/api/admin/completed-shifts'
         );
 
         const data =

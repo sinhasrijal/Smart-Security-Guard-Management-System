@@ -23,7 +23,7 @@ async function loadDutyDetails(){
         const response =
         await fetch(
 
-            `http://localhost:3000/api/guard/duty/${guardId}`
+            `https://smart-security-guard-management-system.onrender.com/api/guard/duty/${guardId}`
         );
 
         const data =
@@ -105,7 +105,7 @@ async function loadAttendanceHistory(){
         const response =
         await fetch(
 
-            `http://localhost:3000/api/guard/attendance/${guardId}`
+            `https://smart-security-guard-management-system.onrender.com/api/guard/attendance/${guardId}`
         );
 
         const data =
@@ -170,7 +170,7 @@ async function loadSalary(){
         const response =
         await fetch(
 
-            `http://localhost:3000/api/guard/salary/${guardId}`
+            `https://smart-security-guard-management-system.onrender.com/api/guard/salary/${guardId}`
         );
 
         const data =
@@ -230,7 +230,7 @@ document.getElementById(
             const response =
             await fetch(
 
-                'http://localhost:3000/api/guard/verify-attendance',
+                'https://smart-security-guard-management-system.onrender.com/api/guard/verify-attendance',
 
                 {
 

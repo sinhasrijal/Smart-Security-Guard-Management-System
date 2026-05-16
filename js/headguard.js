@@ -9,7 +9,7 @@ async function loadAssignedGuards(){
         const response =
         await fetch(
 
-            'http://localhost:3000/api/headguard/assigned-guards'
+            'https://smart-security-guard-management-system.onrender.com/api/headguard/assigned-guards'
         );
 
         const data =
@@ -78,7 +78,7 @@ async function loadGateStatus(){
         const response =
         await fetch(
 
-            'http://localhost:3000/api/headguard/gate-status'
+            'https://smart-security-guard-management-system.onrender.com/api/headguard/gate-status'
         );
 
         const data =
@@ -208,7 +208,7 @@ document.getElementById(
             const response =
             await fetch(
 
-                'http://localhost:3000/api/headguard/assign-duty',
+                'https://smart-security-guard-management-system.onrender.com/api/headguard/assign-duty',
 
                 {
 
@@ -258,7 +258,7 @@ async function loadGateCodes(){
         const response =
         await fetch(
 
-            'http://localhost:3000/api/headguard/gate-codes'
+            'https://smart-security-guard-management-system.onrender.com/api/headguard/gate-codes'
         );
 
         const data =
@@ -319,7 +319,7 @@ async function loadAttendance(){
         const response =
         await fetch(
 
-            'http://localhost:3000/api/headguard/attendance'
+            'https://smart-security-guard-management-system.onrender.com/api/headguard/attendance'
         );
 
         const data =

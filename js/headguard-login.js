@@ -15,7 +15,7 @@ window.onload = function () {
         if (username === "hg1" && password === "pass") {
 
             window.location.href =
-                "http://localhost:3000/html/headguard.html";
+                "https://smart-security-guard-management-system.onrender.com/html/headguard.html";
 
         } else {
 
